@@ -47,8 +47,6 @@ function generateToken(user) {
         username: user.username,
     };
 
-    const secret = secrets.jwtSecret;
-
     const options = {
         expiresIn: '1h'
     }
