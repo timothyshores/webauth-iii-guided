@@ -44,7 +44,7 @@ function generateToken(user) {
         username: user.username,
     };
 
-    const secret = 'secret string to store in .env file before production'
+    const secret = process.env.JWT_SECRET;
 
     const options = {
         expiresIn: '1h'
