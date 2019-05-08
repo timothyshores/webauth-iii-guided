@@ -1,6 +1,5 @@
-const bcrypt = require('bcryptjs');
-
-const Users = require('../users/users-model.js');
+const jwt = require('jsonwebtoken');
+const secrets = require('../config/secrets');
 
 module.exports = (req, res, next) => {
 
