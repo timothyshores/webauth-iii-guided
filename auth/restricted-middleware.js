@@ -3,6 +3,15 @@ const bcrypt = require('bcryptjs');
 const Users = require('../users/users-model.js');
 
 module.exports = (req, res, next) => {
+
+    jwt.verify(token, secret, (err, decodedToken) => {
+        if (err) {
+            // token is invalid, expired or modified
+        } else {
+            // token is valid
+        }
+    })
+
     const { username, password } = req.headers;
 
     if (username && password) {
